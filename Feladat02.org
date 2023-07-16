@@ -1,0 +1,190 @@
+#+title: Egyszerű mérések és számolások digitális légifényképeken
+#+date: 2023.
+#+author: Kalicz Péter
+#+email: kalicz.peter@uni-sopron.hu
+#+options: ':nil *:t -:t ::t <:t H:3 \n:nil ^:t arch:headline
+#+options: author:t broken-links:nil c:nil creator:nil
+#+options: d:(not "LOGBOOK") date:t e:t email:nil f:t inline:t num:nil
+#+options: p:nil pri:nil prop:nil stat:t tags:nil tasks:nil tex:t
+#+options: timestamp:nil title:t toc:nil todo:t |:t
+#+latex_class: article
+#+latex_class_options: [a4paper]
+#+latex_header: \usepackage[margin=1in]{geometry}
+#+latex_header: \usepackage{indentfirst}
+#+latex_header: \usepackage[english,hungarian]{babel}
+#+latex_header: \frenchspacing
+#+latex_header: \usepackage{subfig}
+#+latex_header_extra:
+#+description:
+#+keywords:
+#+subtitle:
+#+latex_compiler: pdflatex
+#+language: en
+#+select_tags: export
+#+exclude_tags: noexport
+#+creator: Emacs 27.1 (Org mode 9.3)
+
+Feladatomban egy Jász-Nagykun-Szolnok vármegyében, a Nagykunságban
+fekvő településről, Kunhegyesről és községhatáráról rendelkezésre álló
+légifényképek alapján dolgoztam.
+A település elérhetősége a [[http://fentrol.hu][fentrol.hu]]-n:
+https://www.fentrol.hu/hu/kereses/telepules/Kunhegyes.
+
+* Képanyag ismertetése
+A feladat végrehajtásának első lépéseként bemutatom a területről
+kiválasztott képanyagot.
+** Másodlagos digitális kép
+
+#+latex: \begin{figure}\centering
+#+latex: \subfloat[ms5]{\label{fig:msdlgs5} 
+#+attr_latex: :width 0.4\textwidth :center nil
+[[file:Kis1978_0107_3495.jpg]]
+#+latex: }\subfloat[ms6]{\label{fig:msdlgs6} 
+#+attr_latex: :width 0.4\textwidth :center nil
+[[file:Kis1978_0107_3496.jpg]]
+#+latex: }\caption{A kiválasztott másodlagos képpár}\label{fig:msdlgs}
+#+latex: \end{figure}
+
+
+*** Filmtípus
+*** Kép mérete, tömörítési aránya
+18026\cdot{}16816
+*** Kamera és optika típusa
+*** Becsült terepi pixelméret
+*** Repülési magasság
+*** Méretarány
+*** Ábrázolt terület
+*** Felvételi időpont
+*** Szkennelési felbontás
+res’ (mm/pixel)
+** Elsődleges digitális kép
+*** Kép mérete, tömörítési aránya
+*** Kamera és optika típusa
+*** Becsült terepi pixelméret
+*** Repülési magasság
+*** Méretarány
+*** Ábrázolt terület
+*** Felvételi időpont
+
+*** Felbontás
+res’ (mm/pixel)
+
+* Egyképes rész
+** Névleges méretarány
+M_k nom
+** Tényleges méretarány
+M_k ), méretarányszám (a k )
+** Repülési magasság
+(h 0 )
+** Terepi felbontás
+res
+és az ehhez használt
+  távolságok képkivágata (QGIS és GE)
+
+** Látószögek
+A felvétel teljes (oldalirányú) látószögének (\Omega
+Field of View: FOV), valamint pillanatnyi látószögének (\omega
+Instantaneous Field of View: IFOV) meghatározása.
+
+
+* Kétképes rész
+** Másodlagos digitális kép
+*** Képi és terepi bázis meghatározása
+b'
+
+B
+
+*** Képméret meghatározása
+digitális kameránál mindkét irányban;
+s’
+S
+
+*** Bázis irányú átfedés
+p(%)
+
+*** Átlagos relatív repülési magasság
+h0
+
+***  B/H viszony meghatározása
+mindkét képpárra;
+
+** Objektum magasságának meghatározása
+*** Normál sztereogramm alapján
+dh
+képkivágatok az objektumról;
+
+*** Egy kép alapján
+dh, képkivágatok;
+
+** Elsődleges digitális kép
+*** Képi és terepi bázis meghatározása
+b'
+
+B
+
+*** Képméret meghatározása
+digitális kameránál mindkét irányban;
+s’
+S
+
+*** Bázis irányú átfedés
+p(%)
+
+*** Átlagos relatív repülési magasság
+h0
+
+***  B/H viszony meghatározása
+mindkét képpárra;
+
+* Objektum magasságának meghatározása
+** Normál sztereogramm alapján
+dh
+képkivágatok az objektumról;
+
+** Egy kép alapján
+dh, képkivágatok;
+
+* R kódok
+
+* 2. feladat kiírás                                                :noexport:
+Cím: Egyszerű mérések és számolások digitális légifényképeken
+
+A feladat célja, hogy a hallgatók megértsék a centrális vetítés
+alapvető törvényszerűségeit, valamint hogy légifényképeken és
+légifénykép-párokon egyszerű méréseket tudjanak végezni.
+
+A feladat megoldásához a következőkre van szükség:
+1. Másodlagos digitális kép(pár) a http://fentrol.hu/ oldalról,
+   kis-közepes méretarányban (1:20’000-nél kisebb);
+2. Elsődleges digitális kép(pár) ugyan arról a területről a
+   https://geoshop.hu/ oldalról;
+3. Szoftver: javasolt a QGIS, de a TopoLynx topoXmap program is
+   használható.
+
+** Leadandók
+*** Egyképes rész másodlagos és elsődleges digitális képre:
+- [ ] Kiválasztott kép(anyag) ismertetése (filmtípus, képméret,
+  becsült terepi pixelméret, kamera és optika típusa, repülési
+  magasság, méretarány, ábrázolt terület, felvételi időpont vagy
+  évszak, stb.). Ehhez célszerű (amennyiben rendelkezésre áll) az
+  adott felvétel törzslapját, metaadatait és kamerakalibrációs
+  jegyzőkönyvét is felhasználni. Érdekességek.
+- [ ] Kép mérete, tömörítési aránya.
+- [ ] Szkennelési felbontás: res’ (mm/pixel)
+- [ ] Névleges méretarány: (M k nom )
+- [ ] Tényleges méretarány: (M k ), méretarányszám (a k ), repülési
+  magasság (h 0 ), terepi felbontás (res) és az ehhez használt
+  távolságok képkivágata (QGIS és GE)
+- [ ] Látószögek – A felvétel teljes (oldalirányú) látószögének (Ω
+  Field of View: FOV), valamint pillanatnyi látószögének (ω
+  Instantaneous Field of View: IFOV) meghatározása.
+*** Kétképes rész másodlagos és elsődleges digitális képre:
+- [ ] Képi (b’) és terepi bázis (B) meghatározása;
+- [ ] Képméretek meghatározása (s’ és S), digitális kameránál mindkét irányban;
+- [ ] Bázis irányú átfedés (p(%));
+- [ ] Átlagos relatív repülési magasság (h0) meghatározása;
+- [ ] B/H viszony meghatározása mindkét képpárra;
+- [ ] Egy objektum magasságának meghatározása a normál sztereogramm
+  alapján (dh), képkivágatok az objektumról;
+- [ ] Egy objektum (lehetőség szerint ugyanannak) magasságának
+  meghatározása egy kép alapján (dh), képkivágatok;
