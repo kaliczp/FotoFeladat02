@@ -32,18 +32,17 @@ https://www.fentrol.hu/hu/kereses/telepules/Kunhegyes.
 
 * Képanyag ismertetése
 A feladat végrehajtásának első lépéseként bemutatom a területről
-kiválasztott képanyagot.
+kiválasztott képanyagot és ismertetem a képanyag jellemzőit. A
+képanyag ismertetése után hajtom végre az egyképes és a kétképes
+feldolgozás feladatait.
 ** Másodlagos digitális kép
 
-#+latex: \begin{figure}\centering
-#+latex: \subfloat[ms5]{\label{fig:msdlgs5} 
-#+attr_latex: :width 0.4\textwidth :center nil
-[[file:Kis1978_0107_3495.jpg]]
-#+latex: }\subfloat[ms6]{\label{fig:msdlgs6} 
-#+attr_latex: :width 0.4\textwidth :center nil
-[[file:Kis1978_0107_3496.jpg]]
-#+latex: }\caption{A kiválasztott másodlagos képpár}\label{fig:msdlgs}
-#+latex: \end{figure}
+A másodlagos képek közül egy színes sorozatot választottam 1978-ból
+(lásd [[fig:msdlgs]]. ábra).
+
+#+CAPTION: A kiválasztott másodlagos képpár
+#+NAME: fig:msdlgs
+[[file:Masodlg.jpg]]
 
 
 *** Filmtípus
