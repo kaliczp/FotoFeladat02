@@ -57,6 +57,12 @@ A másodlagos képek közül egy színes sorozatot választottam 1978-ból
 *** Szkennelési felbontás
 res’ (mm/pixel)
 ** Elsődleges digitális kép
+#+CAPTION: A kiválasztott elsődleges képpár
+#+NAME: fig:elsdlgs
+#+ATTR_LATEX: width: \textwidth
+[[file:Elsdlgs.jpg]]
+
+
 *** Kép mérete, tömörítési aránya
 *** Kamera és optika típusa
 *** Becsült terepi pixelméret
